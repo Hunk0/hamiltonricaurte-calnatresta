@@ -29,13 +29,21 @@ object Main extends App {
 
         iConv(Cero(), i)
     }
-    def imprimirNat(nat: Nat): String = ???
-    def restaNat(nat1: Nat, nat2: Nat): Nat = ???
+    def imprimirNat(nat: Nat): String = nat.toString()
+    def restaNat(nat1: Nat, nat2: Nat): Nat = {
+        val res = entero1 - entero2
+
+        conIntANat(res)
+    }
 
     val entero1 = leetInt("Leer primer entero ")
     val entero2 = leetInt("Leer segundo entero ")
-    val nat1 = conIntANat(entero1)
-    val nat2 = conIntANat(entero2)
+    val gnat1 = conIntANat(entero1)
+    val gnat2 = conIntANat(entero2)
+
+    println(imprimirNat(gnat1))
+    println(imprimirNat(gnat2))
+    println(imprimirNat(restaNat(gnat1, gnat2)))
 
     //println(restaNat(entero1, entero2))
 }
